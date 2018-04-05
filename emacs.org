@@ -432,6 +432,9 @@ Being asked to type in yes explicitly all the time gets very tedious. I understa
   (setq org-src-tab-acts-natively t) ;; you want this to have completion in blocks
   (setq org-hide-emphasis-markers t) ;; to hide the *,=, or / markers
   (setq org-pretty-entities t)       ;; to have \alpha, \to and others display as utf8 http://orgmode.org/manual/Special-symbols.html
+
+  (require 'org-bullets)             ;; Nicer bullets
+  (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 #+END_SRC
 ** Agenda
 *** Add short cut keys for the org-agenda                            :ARNAUD:
@@ -744,4 +747,8 @@ TRAMP mode can also be used to edit files on the same machine as another user, i
 #+BEGIN_SRC emacs-lisp
 (setq-default ispell-program-name "aspell")
 (setq ispell-dictionary "french")
+#+END_SRC
+** Undo tree
+#+BEGIN_SRC emacs-lisp
+  (global-undo-tree-mode)
 #+END_SRC
