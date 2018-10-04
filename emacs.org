@@ -512,6 +512,10 @@ Note that the code requires that a checkbox statistics cookie (the [/] or [%] th
 
 [16:27:59; 24.04.2013]
 
+** Timestamp when closing items                                     :STEVEN:
+#+BEGIN_SRC  emacs-lisp
+  (setq org-log-done 'time)
+#+END_SRC
 * Org-mode shortcuts
 ** Adding date with brackets with command "C-c d":                     :LUKA:
 #+BEGIN_SRC emacs-lisp
