@@ -624,6 +624,7 @@ C-x n w     (widen)
   (org-babel-do-load-languages
    'org-babel-load-languages
    '(
+     (C . t)
      (sh . t)
      (python . t)
      (R . t)
@@ -700,6 +701,11 @@ To use this type <B and then TAB. This comes with a session argument
   (add-hook 'org-mode-hook 'org-display-inline-images)
   (add-hook 'org-mode-hook 'org-babel-result-hide-all)
 #+END_SRC
+** Plantuml                                                         :STEVEN:
+#+BEGIN_SRC emacs_lisp
+  (setq org-plantuml-jar-path "/home/squinito/Downloads/plantuml.jar")
+#+END_SRC
+
 * Org-mode LaTeX export
 ** ACM                                                               :ARNAUD:
 #+BEGIN_SRC emacs-lisp
