@@ -1,0 +1,24 @@
+# -*- mode: snippet -*-
+# name: class-header
+# key: clhdr
+# --
+
+#ifndef ${1:_`(upcase (file-name-nondirectory (file-name-sans-extension (buffer-file-name))))`_HPP_}
+#define $1
+
+class ${2:Name}{
+/******************** Attributes ********************/
+private:
+protected:
+public:
+
+/******************* Constructors *******************/
+public:
+  $2();
+  ~$2();
+
+/********************** Methods *********************/
+
+};
+
+#endif /* $1 */
