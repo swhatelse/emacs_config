@@ -17,7 +17,15 @@ public:
   $2();
   ~$2();
 
+/******************** Destructors *******************/
+private:
+protected:
+public:
+
 /********************** Methods *********************/
+private:
+protected:
+public:
 
 };
 
