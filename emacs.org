@@ -81,9 +81,9 @@ work (in particular in the org-mode website generation section or in
 ** Adding .el files stored in folder elisp:                             :WEB:
 #+BEGIN_SRC emacs-lisp
   (add-to-list 'load-path "~/lib/elisp/")
-  (add-to-list 'load-path "~/.emacs.d/elpa/org-20140707/")
-  (add-to-list 'load-path "~/.emacs.d/elpa/xclip-1.3/")
-  (add-to-list 'load-path "~/.emacs.d/elpa/htmlize-20130207.1202/")
+  ;;(add-to-list 'load-path "~/.emacs.d/elpa/org-20140707/")
+  (add-to-list 'load-path "~/.emacs.d/elpa/xclip-1.5/")
+  ;;(add-to-list 'load-path "~/.emacs.d/elpa/htmlize-20130207.1202/")
   ;;(require 'org-git-link) ;; Made some personal modifications
 #+END_SRC
 [10:42:15; 24.06.2013]
@@ -228,6 +228,11 @@ Useful if you want to export org files in batch mode...
   ;; (add-hook 'c++-mode-hook 'my-c-mode-cedet-hook)
 #+END_SRC
 
+* PDF reader
+To use pdf-tools to read pdf
+#+BEGIN_SRC  emacs-lisp
+(pdf-loader-install)
+#+END_SRC
 * Emacs aesthetics:
 ** Theme
  #+BEGIN_SRC emacs-lisp
@@ -625,7 +630,7 @@ C-x n w     (widen)
    'org-babel-load-languages
    '(
      (C . t)
-     (sh . t)
+     (shell . t)
      (python . t)
      (R . t)
      (ruby . t)
