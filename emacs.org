@@ -75,8 +75,7 @@ work (in particular in the org-mode website generation section or in
   (setq package-archives
   '(("ELPA" . "http://tromey.com/elpa/")
      ("gnu" . "http://elpa.gnu.org/packages/")
-     ("melpa" . "http://melpa.milkbox.net/packages/")
-     ("marmalade" . "http://marmalade-repo.org/packages/")))
+     ("melpa" . "http://melpa.milkbox.net/packages/")))
 #+END_SRC
 ** Adding .el files stored in folder elisp:                             :WEB:
 #+BEGIN_SRC emacs-lisp
@@ -236,8 +235,16 @@ To use pdf-tools to read pdf
 * Emacs aesthetics:
 ** Theme
  #+BEGIN_SRC emacs-lisp
-   ;;(add-to-list 'custom-theme-load-path "~/.emacs.d/elpa/color-theme-monokai-0.0.5/")
-   (load-theme 'monokai t)
+   (add-hook 'text-mode-hook
+             (lambda ()
+               (variable-pitch-mode 1)))
+
+   (set-face-attribute 'default nil :family "Iosevka" :height 130)
+   (set-face-attribute 'fixed-pitch nil :family "Iosevka")
+   (set-face-attribute 'variable-pitch nil :family "Baskerville")
+
+   (setq split-width-threshold 0)  ;; force to split window vertically
+   (load-theme 'poet-dark-monochrome t)
  #+END_SRC
 ** Line and column numbering                                         :ARNAUD:
 #+BEGIN_SRC emacs-lisp
@@ -439,6 +446,8 @@ Being asked to type in yes explicitly all the time gets very tedious. I understa
   (setq org-pretty-entities t)       ;; to have \alpha, \to and others display as utf8 http://orgmode.org/manual/Special-symbols.html
 
   (require 'org-bullets)             ;; Nicer bullets
+  (setq org-bullets-bullet-list
+        '("◉" "○"))
   (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 #+END_SRC
 ** Agenda
