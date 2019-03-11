@@ -244,7 +244,8 @@ To use pdf-tools to read pdf
    (set-face-attribute 'variable-pitch nil :family "Baskerville")
 
    (setq split-width-threshold 0)  ;; force to split window vertically
-   (load-theme 'poet-dark-monochrome t)
+   ;; (load-theme 'poet-dark-monochrome t)
+   (load-theme 'zenburn t)
  #+END_SRC
 ** Line and column numbering                                         :ARNAUD:
 #+BEGIN_SRC emacs-lisp
